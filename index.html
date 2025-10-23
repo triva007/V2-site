@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="fr" style="scroll-behavior: smooth;">
+  <head>
+    <meta charset="UTF--8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr Johanna Auvray – Psychologue clinicienne à Paris 17 | TCC & Neuropsychologie</title>
+    <meta name="description" content="Psychologue clinicienne à Paris 17 spécialisée en TCC, neuropsychologie, TDAH et troubles anxieux. Consultations au cabinet ou en visioconsultation. Appel découverte offert de 15 minutes.">
+    <meta name="keywords" content="psychologue Paris 17, psychologue TCC Paris 17, neuropsychologue Paris 17, bilan neuropsychologique Paris 17, psychologue spécialisée TDAH TSA Paris">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#F8F3EF',
+            primary: '#86968D', // New elegant sage green
+            secondary: '#3C2E2A',
+            accent: '#F5E6E0', // Old primary, now accent
+            'accent-pink': '#C8A59C',
+            text: '#3C2E2A',
+            'text-dark': '#332521',
+          },
+          fontFamily: {
+            heading: ['Lora', 'serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          transitionTimingFunction: {
+            'out-expo': 'cubic-bezier(0.16, 1, 0.3, 1)',
+          },
+        }
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Psychologist",
+      "name": "Dr Johanna Auvray",
+      "image": "https://picsum.photos/seed/johanna-auvray-portrait/400/400",
+      "description": "Psychologue clinicienne à Paris 17 spécialisée en TCC, neuropsychologie, TDAH et troubles anxieux. Consultations en cabinet et en visioconsultation.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "45 Boulevard Gouvion-Saint-Cyr",
+        "addressLocality": "Paris",
+        "postalCode": "75017",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.881,
+        "longitude": 2.283
+      },
+      "url": "https://www.johanna-auvray.fr",
+      "email": "psy.auvray@gmail.com",
+      "openingHours": ["Mo 09:00-20:00", "Tu 09:00-20:00"],
+      "priceRange": "€€"
+    }
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #F8F3EF;
+        color: #3C2E2A;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Lora', serif;
+        font-weight: 500;
+        letter-spacing: -0.025em;
+      }
+      h1 { font-size: 4.5rem; line-height: 1.1; }
+      h2 { font-size: 3rem; line-height: 1.2; }
+      h3 { font-size: 1.75rem; line-height: 1.3; }
+
+      .font-heading {
+        font-family: 'Lora', serif;
+      }
+
+      @media (max-width: 768px) {
+        h1 { font-size: 2.75rem; }
+        h2 { font-size: 2.25rem; }
+        h3 { font-size: 1.5rem; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
