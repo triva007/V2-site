@@ -35,6 +35,15 @@
           transitionTimingFunction: {
             'out-expo': 'cubic-bezier(0.16, 1, 0.3, 1)',
           },
+           keyframes: {
+             'fade-in-down': {
+                '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+           },
+           animation: {
+              'fade-in-down': 'fade-in-down 0.5s ease-out-expo',
+           }
         }
       }
     }
@@ -44,8 +53,8 @@
     {
       "@context": "https://schema.org",
       "@type": "Psychologist",
-      "name": "Dr Johanna Auvray",
-      "image": "https://picsum.photos/seed/johanna-auvray-portrait/400/400",
+      "name": "Dr Johanna Auvray Unglik",
+      "image": "https://www.johanna-auvray.fr/portrait-johanna-auvray.jpg",
       "description": "Psychologue clinicienne à Paris 17 spécialisée en TCC, neuropsychologie, TDAH et troubles anxieux. Consultations en cabinet et en visioconsultation.",
       "address": {
         "@type": "PostalAddress",
@@ -62,7 +71,10 @@
       "url": "https://www.johanna-auvray.fr",
       "email": "psy.auvray@gmail.com",
       "openingHours": ["Mo 09:00-20:00", "Tu 09:00-20:00"],
-      "priceRange": "€€"
+      "priceRange": "€€",
+      "sameAs": [
+        "https://www.doctolib.fr/psychologue/paris/johanna-auvray"
+      ]
     }
     </script>
     <style>
@@ -74,11 +86,15 @@
         line-height: 1.7;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233C2E2A' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       }
       h1, h2, h3, h4, h5, h6 {
         font-family: 'Lora', serif;
         font-weight: 500;
         letter-spacing: -0.025em;
+        overflow-wrap: break-word;
       }
       h1 { font-size: 4.5rem; line-height: 1.1; }
       h2 { font-size: 3rem; line-height: 1.2; }
@@ -89,8 +105,11 @@
       }
 
       @media (max-width: 768px) {
-        h1 { font-size: 2.75rem; }
-        h2 { font-size: 2.25rem; }
+        body {
+            font-size: 1rem;
+        }
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
         h3 { font-size: 1.5rem; }
       }
     </style>
@@ -99,13 +118,13 @@
   "imports": {
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0"
+    "react": "https://aistudiocdn.com/react@^19.2.0/index.js"
   }
 }
 </script>
 </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+<body>
+  <div id="root"></div>
+  <script type="module" src="index.tsx"></script>
+</body>
 </html>

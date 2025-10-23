@@ -26,16 +26,25 @@ const AboutPage: React.FC = () => {
                         <div className="lg:col-span-3">
                             <AnimatedSection>
                                 <h2 className="font-heading text-3xl font-semibold text-secondary">Mon Parcours</h2>
-                                <div className="mt-6 space-y-4 text-lg leading-relaxed prose prose-lg max-w-none">
-                                    <p>
-                                        Diplômée d'un <strong>Doctorat en Psychologie</strong> de l'Université Paris Descartes (Paris Cité), ma pratique est enrichie par une double expertise en <strong>neuropsychologie</strong> et en <strong>Thérapies Comportementales et Cognitives (TCC)</strong>.
-                                    </p>
-                                    <p>
-                                        Mon expérience hospitalière à l'<strong>Hôpital de la Pitié-Salpêtrière (AP-HP)</strong>, notamment dans des services spécialisés en chirurgie bariatrique et en neurologie, m'a permis de développer une expertise dans l'accompagnement de problématiques complexes.
-                                    </p>
-                                    <p>
-                                        En parallèle de mon activité clinique, je suis également <strong>enseignante à l'Institut de Psychologie</strong> de l'Université Paris Cité et mène des activités de recherche au sein du Laboratoire de Psychopathologie et Processus de Santé (LPPS). Cette double casquette me permet de maintenir une pratique constamment mise à jour avec les dernières avancées scientifiques.
-                                    </p>
+                                <div className="mt-6 space-y-6 text-lg leading-relaxed prose prose-lg max-w-none">
+                                    <div>
+                                        <h3 className="text-xl font-semibold text-primary">Formation Universitaire & Recherche</h3>
+                                        <p>
+                                            Diplômée d'un <strong>Doctorat en Psychologie</strong> de l'Université Paris Descartes (aujourd'hui Université Paris Cité), mes recherches se sont concentrées sur les processus cognitifs et émotionnels. Cette base scientifique solide est le fondement de ma pratique clinique. Je poursuis mes activités de recherche au sein du Laboratoire de Psychopathologie et Processus de Santé (LPPS), ce qui me permet de rester à la pointe des avancées thérapeutiques.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3 className="text-xl font-semibold text-primary">Expérience Hospitalière</h3>
+                                        <p>
+                                            J'ai exercé plusieurs années en tant que psychologue à l'<strong>Hôpital de la Pitié-Salpêtrière (AP-HP)</strong>. Cette expérience en milieu hospitalier, notamment dans des services de neurologie et de chirurgie bariatrique, m'a apporté une expertise approfondie dans l'accompagnement de patients confrontés à des maladies chroniques et à des changements de vie majeurs.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3 className="text-xl font-semibold text-primary">Enseignement</h3>
+                                        <p>
+                                            Passionnée par la transmission, je suis également <strong>enseignante à l'Institut de Psychologie</strong> de l'Université Paris Cité. Partager mes connaissances avec les futurs psychologues est une source d'enrichissement constant qui nourrit ma pratique quotidienne.
+                                        </p>
+                                    </div>
                                 </div>
                             </AnimatedSection>
                             <AnimatedSection className="mt-12">
@@ -57,14 +66,16 @@ const AboutPage: React.FC = () => {
                         </div>
                         <div className="lg:col-span-2">
                              <AnimatedSection delay={200}>
-                                <img
-                                    src="https://picsum.photos/seed/johanna-auvray-portrait/800/1000"
-                                    alt="Portrait du Dr Johanna Auvray Unglik"
-                                    className="rounded-lg shadow-xl w-full h-auto object-cover sticky top-32"
-                                />
-                                <div className="mt-6 bg-accent p-4 rounded-lg text-sm text-center">
-                                    <p><strong>Numéro RPPS :</strong> 10008937095</p>
-                                    <p><strong>Numéro SIRET :</strong> 90849197000012</p>
+                                <div className="lg:sticky top-32">
+                                    <img
+                                        src="https://picsum.photos/seed/warm-office-portrait/800/1000"
+                                        alt="Portrait professionnel du Dr Johanna Auvray Unglik"
+                                        className="rounded-lg shadow-xl w-full h-auto object-cover"
+                                    />
+                                    <div className="mt-6 bg-accent p-4 rounded-lg text-sm text-center">
+                                        <p><strong>Numéro RPPS :</strong> 10008937095</p>
+                                        <p><strong>Numéro SIRET :</strong> 90849197000012</p>
+                                    </div>
                                 </div>
                             </AnimatedSection>
                         </div>

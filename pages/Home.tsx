@@ -15,7 +15,7 @@ const ReassuranceBand = () => {
         <section className="bg-accent py-16">
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <AnimatedSection>
-                    <h2 className="text-center font-heading text-3xl font-semibold text-secondary">
+                    <h2 className="text-center font-heading text-3xl md:text-4xl font-semibold text-secondary">
                         Une Expertise Reconnue et un Cadre de Confiance
                     </h2>
                 </AnimatedSection>
@@ -74,10 +74,10 @@ const PatientProfiles = () => {
     ];
     
     return (
-       <section className="py-28">
+       <section className="py-28 bg-background">
            <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <AnimatedSection className="text-center">
-                    <h2 className="font-heading text-4xl font-semibold text-secondary">J'accompagne les adultes et jeunes adultes</h2>
+                    <h2 className="font-heading text-3xl md:text-4xl font-semibold text-secondary">J'accompagne les adultes et jeunes adultes</h2>
                     <p className="mt-4 text-xl text-text-dark max-w-3xl mx-auto">
                         Mon expertise se concentre sur l'accompagnement des problématiques qui peuvent impacter votre bien-être personnel, relationnel et professionnel.
                     </p>
@@ -85,7 +85,7 @@ const PatientProfiles = () => {
                 <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {profiles.map((profile, index) => (
                          <AnimatedSection key={index} delay={index * 100}>
-                            <div className="bg-white p-8 rounded-2xl shadow-lg h-full text-center transition-all duration-300 ease-out-expo hover:shadow-xl hover:-translate-y-2 flex flex-col">
+                            <div className="bg-white p-8 rounded-2xl shadow-lg h-full text-center transition-all duration-300 ease-out-expo hover:shadow-2xl hover:-translate-y-2 hover:shadow-primary/20 flex flex-col">
                                 {profile.icon}
                                <h3 className="text-2xl mt-4 font-semibold text-secondary font-heading">{profile.title}</h3>
                                <p className="mt-2 text-text-dark flex-grow">{profile.description}</p>
@@ -109,7 +109,7 @@ const ApproachSummary = () => {
         <section className="bg-accent py-28">
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                  <AnimatedSection className="text-center">
-                    <h2 className="font-heading text-4xl font-semibold text-secondary">Des approches sur-mesure pour vous aider à avancer</h2>
+                    <h2 className="font-heading text-3xl md:text-4xl font-semibold text-secondary">Des approches sur-mesure pour vous aider à avancer</h2>
                 </AnimatedSection>
                 <div className="mt-16 grid md:grid-cols-3 gap-8">
                     {approaches.map((item, index) => (
@@ -136,13 +136,13 @@ const AboutSummary = () => {
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
                     <AnimatedSection>
                         <img 
-                        src="https://picsum.photos/seed/johanna-portrait-2/800/900" 
+                        src="https://picsum.photos/seed/professional-portrait/800/900" 
                         alt="Portrait du Dr Johanna Auvray Unglik" 
                         className="rounded-lg shadow-xl w-full h-auto object-cover"
                         />
                     </AnimatedSection>
                     <AnimatedSection>
-                        <h2 className="font-bold font-heading text-secondary text-4xl">Dr Johanna Auvray Unglik, votre psychologue à Paris 17ème</h2>
+                        <h2 className="font-bold font-heading text-secondary text-3xl md:text-4xl">Dr Johanna Auvray Unglik, votre psychologue à Paris 17ème</h2>
                         <p className="mt-6 text-lg leading-relaxed">
                         Docteure en psychologie et spécialiste des TCC et de la neuropsychologie, je crois en une approche collaborative et pragmatique. Mon objectif est de vous accompagner avec écoute et bienveillance pour vous aider à atteindre vos objectifs.
                         </p>
@@ -161,7 +161,7 @@ const FinalCTA = () => {
         <section className="bg-accent py-20">
             <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
                 <AnimatedSection>
-                    <h2 className="font-heading text-4xl font-semibold text-secondary">Prêt(e) à faire le premier pas ?</h2>
+                    <h2 className="font-heading text-3xl md:text-4xl font-semibold text-secondary">Prêt(e) à faire le premier pas ?</h2>
                     <p className="mt-4 text-xl">
                         Contactez-moi pour un premier échange. L'appel découverte est gratuit, confidentiel et sans engagement.
                     </p>

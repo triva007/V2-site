@@ -6,14 +6,6 @@ const Header: React.FC = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-
-  const mainNavLinks = [
-    { name: 'Accueil', href: '#/' },
-    { name: 'À Propos', href: '#/a-propos' },
-    { name: 'Tarifs & Infos', href: '#/tarifs-infos' },
-    { name: 'FAQ', href: '#/faq' },
-    { name: 'Contact', href: '#/contact' },
-  ];
   
   const approachLinks = [
       { name: 'Thérapies TCC', href: '#/tcc' },
@@ -46,14 +38,14 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 shadow-md backdrop-blur-lg' : 'bg-transparent'}`}>
+    <header className={`sticky top-0 z-50 transition-all duration-300 h-20 md:h-24 ${isScrolled ? 'bg-background/80 shadow-md backdrop-blur-lg' : 'bg-transparent'}`}>
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-full">
           <a href="#/" onClick={(e) => handleNavClick(e, '#/')} className="text-xl font-bold font-heading text-secondary hover:text-primary transition-colors">
-            Dr Johanna Auvray
+            Dr Johanna Auvray Unglik
           </a>
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#/" onClick={(e) => handleNavClick(e, '/')} className="group text-text-dark hover:text-primary transition-colors duration-200 text-lg relative">Accueil<span className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out-expo"></span></a>
+          <nav className="hidden md:flex items-center space-x-10">
+            <a href="#/" onClick={(e) => handleNavClick(e, '#/')} className="group text-text-dark hover:text-primary transition-colors duration-200 text-lg relative">Accueil<span className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out-expo"></span></a>
             
             <div className="relative" ref={dropdownRef}>
               <button onClick={() => setDropdownOpen(!isDropdownOpen)} className="group text-text-dark hover:text-primary transition-colors duration-200 text-lg relative flex items-center gap-1">
@@ -78,7 +70,12 @@ const Header: React.FC = () => {
             <Button href="#/contact" variant="primary">Prendre RDV</Button>
           </nav>
           <div className="md:hidden">
-            <button onClick={() => setMobileMenuOpen(!isMobileMenuOpen)} className="text-secondary focus:outline-none">
+            <button 
+              onClick={() => setMobileMenuOpen(!isMobileMenuOpen)} 
+              className="text-secondary focus:outline-none"
+              aria-label="Ouvrir le menu de navigation"
+              aria-expanded={isMobileMenuOpen}
+            >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}></path></svg>
             </button>
           </div>

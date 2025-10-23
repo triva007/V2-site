@@ -3,7 +3,6 @@ import PageHeader from '../components/PageHeader';
 import AnimatedSection from '../components/AnimatedSection';
 import Button from '../components/Button';
 
-// FIX: Define props with an interface for better readability and to resolve potential tooling issues.
 interface InfoCardProps {
     title: string;
     children: React.ReactNode;
@@ -29,7 +28,6 @@ const PracticalInfoPage: React.FC = () => {
                 <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
                     <div className="space-y-12">
                         <AnimatedSection>
-                            {/* FIX: Added children to the InfoCard component to provide content and resolve the missing 'children' prop error. */}
                             <InfoCard title="Tarifs des Consultations">
                                 <ul className="!p-0">
                                     <li><strong>Consultation individuelle (50 min) :</strong> 90€</li>
@@ -37,30 +35,36 @@ const PracticalInfoPage: React.FC = () => {
                                 </ul>
                             </InfoCard>
                         </AnimatedSection>
+
+                        <AnimatedSection>
+                            <InfoCard title="Horaires d'Ouverture">
+                                <p>Le cabinet est ouvert sur rendez-vous :</p>
+                                <ul className="!p-0">
+                                    <li><strong>Lundi :</strong> 09h – 20h</li>
+                                    <li><strong>Mardi :</strong> 09h – 20h</li>
+                                </ul>
+                            </InfoCard>
+                        </AnimatedSection>
                         
                         <AnimatedSection>
-                            {/* FIX: Added children to the InfoCard component to provide content and resolve the missing 'children' prop error. */}
                             <InfoCard title="Remboursement">
                                 <p>Les consultations de psychologue en libéral ne sont pas remboursées par la Sécurité Sociale. Cependant, de nombreuses <strong>mutuelles</strong> proposent une prise en charge partielle ou totale. Renseignez-vous auprès de la vôtre. Je vous fournirai une facture à cet effet.</p>
                             </InfoCard>
                         </AnimatedSection>
 
                         <AnimatedSection>
-                             {/* FIX: Added children to the InfoCard component to provide content and resolve the missing 'children' prop error. */}
                              <InfoCard title="Visioconsultations">
-                                <p>Je propose également des consultations à distance via une plateforme vidéo sécurisée. Le déroulement et le tarif sont les mêmes que pour une consultation en présentiel.</p>
+                                <p>Je propose également des consultations à distance via une plateforme vidéo sécurisée (Microsoft Teams). Le déroulement et le tarif sont les mêmes que pour une consultation en présentiel.</p>
                             </InfoCard>
                         </AnimatedSection>
 
                         <AnimatedSection>
-                             {/* FIX: Added children to the InfoCard component to provide content and resolve the missing 'children' prop error. */}
                              <InfoCard title="Moyens de Paiement">
                                 <p>Le règlement s'effectue à la fin de chaque séance par espèces, chèque, Lydia ou Paylib.</p>
                             </InfoCard>
                         </AnimatedSection>
 
                         <AnimatedSection>
-                             {/* FIX: Added children to the InfoCard component to provide content and resolve the missing 'children' prop error. */}
                              <InfoCard title="Politique d'Annulation">
                                 <p>Votre temps est précieux, tout comme le mien. Toute consultation non annulée <strong>48 heures à l'avance</strong> est due, sauf en cas de force majeure. Cela permet de proposer le créneau à une autre personne en attente.</p>
                             </InfoCard>

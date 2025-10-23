@@ -42,11 +42,20 @@ interface FaqItemProps {
 const FaqItem: React.FC<FaqItemProps> = ({ faq, index, toggleFAQ, open }) => {
     return (
         <div className={`border-b border-primary/20 transition-colors duration-300 ${open ? 'bg-accent' : 'bg-transparent hover:bg-accent/50'}`}>
-            <button onClick={() => toggleFAQ(index)} className="w-full text-left p-6 flex justify-between items-center gap-4">
+            <button 
+                onClick={() => toggleFAQ(index)} 
+                className="w-full text-left p-6 flex justify-between items-center gap-4"
+                aria-expanded={open}
+                aria-controls={`faq-answer-${index}`}
+            >
                 <span className="text-xl font-semibold text-secondary">{faq.question}</span>
                 <span className={`text-3xl text-primary transform transition-transform duration-300 flex-shrink-0 ${open ? 'rotate-45' : ''}`}>+</span>
             </button>
-            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${open ? 'max-h-96' : 'max-h-0'}`}>
+            <div 
+                id={`faq-answer-${index}`}
+                role="region"
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${open ? 'max-h-96' : 'max-h-0'}`}
+            >
                 <div className="pb-6 px-6 text-lg text-text-dark">
                     <p>{faq.answer}</p>
                 </div>

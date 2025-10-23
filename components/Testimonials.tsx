@@ -1,4 +1,3 @@
-
 import React from 'react';
 import AnimatedSection from './AnimatedSection';
 
@@ -15,7 +14,7 @@ const Testimonials: React.FC = () => {
     <section id="temoignages" className="py-28 bg-background">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
         <AnimatedSection>
-          <h2 className="font-bold font-heading text-secondary">Ce que disent mes patients</h2>
+          <h2 className="font-bold font-heading text-secondary text-4xl">Ce que disent mes patients</h2>
         </AnimatedSection>
         <div className="mt-20 grid gap-10 md:grid-cols-3">
           {reviews.map((review, index) => (

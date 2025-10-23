@@ -1,7 +1,6 @@
 import React from 'react';
 import ContactForm from '../components/ContactForm';
 import AnimatedSection from '../components/AnimatedSection';
-import Button from '../components/Button';
 
 const MapPinIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>;
 const ClockIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>;
@@ -9,8 +8,10 @@ const EnvelopeIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-
 
 const ContactPage: React.FC = () => {
   return (
-    <div className="py-28 bg-background">
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="py-28 bg-background relative overflow-hidden">
+      <div className="absolute top-0 -left-1/4 w-1/2 h-1/2 bg-accent/50 rounded-full filter blur-3xl animate-float opacity-50"></div>
+      <div className="absolute bottom-0 -right-1/4 w-1/2 h-1/2 bg-primary/20 rounded-full filter blur-3xl animate-float animation-delay-3000 opacity-50"></div>
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimatedSection className="text-center">
           <h1 className="text-5xl font-bold font-heading text-secondary">Prendre Rendez-vous</h1>
           <p className="mt-4 text-xl text-text-dark max-w-3xl mx-auto">
@@ -57,7 +58,7 @@ const ContactPage: React.FC = () => {
                   rel="noopener noreferrer"
                   className="block rounded-lg shadow-xl overflow-hidden"
                 >
-                  <img src="https://picsum.photos/seed/paris-map/800/600" alt="Carte du cabinet à Paris 17" className="w-full h-full object-cover"/>
+                  <img src="https://picsum.photos/seed/paris-street-map/800/600" alt="Carte du cabinet à Paris 17" className="w-full h-full object-cover"/>
                 </a>
               </div>
             </div>

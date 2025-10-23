@@ -1,5 +1,12 @@
 import React from 'react';
 
+const DoctolibIcon = () => (
+    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 fill-current">
+      <title>Doctolib</title>
+      <path d="M16.5,6.5A6.5,6.5,0,0,0,10,0,10,10,0,0,0,0,10a10,10,0,0,0,10,10,10,10,0,0,0,10-10,3.5,3.5,0,0,1-3.5-3.5m0,2A1.5,1.5,0,1,1,15,7,1.5,1.5,0,0,1,16.5,8.5Z"/>
+    </svg>
+);
+
 const Footer: React.FC = () => {
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -19,9 +26,9 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-secondary text-accent">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-3 gap-12 text-center md:text-left">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left">
           
-          <div>
+          <div className="lg:col-span-1">
             <h3 className="font-heading font-semibold text-xl text-white">Dr Johanna Auvray Unglik</h3>
             <p className="mt-4 text-accent/80 text-sm leading-relaxed">
               Psychologue clinicienne et Docteure en psychologie à Paris 17. J'accompagne adultes et jeunes adultes avec une approche humaine, scientifique et bienveillante.
@@ -51,12 +58,28 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
+          <div>
+             <h3 className="font-heading font-semibold text-xl text-white">Réseaux</h3>
+             <div className="mt-4 flex justify-center md:justify-start">
+                <a 
+                    href="https://www.doctolib.fr/psychologue/paris/johanna-auvray" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label="Profil Doctolib du Dr Johanna Auvray Unglik"
+                    className="text-accent/80 hover:text-white transition-colors"
+                >
+                    <DoctolibIcon />
+                </a>
+             </div>
+          </div>
+
         </div>
         <div className="mt-16 border-t border-accent/20 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-accent/60">
           <p>© 2025 Dr Johanna Auvray Unglik. Tous droits réservés.</p>
           <div className="mt-4 md:mt-0 flex space-x-4">
-            <a href="#/" onClick={(e) => handleNavClick(e, '#/')} className="hover:text-white transition-colors">Mentions légales</a>
-            <a href="#/" onClick={(e) => handleNavClick(e, '#/')} className="hover:text-white transition-colors">Politique de confidentialité</a>
+            {/* These should ideally lead to actual pages in a real project */}
+            <a href="#/mentions-legales" onClick={(e) => handleNavClick(e, '#/mentions-legales')} className="hover:text-white transition-colors">Mentions légales</a>
+            <a href="#/confidentialite" onClick={(e) => handleNavClick(e, '#/confidentialite')} className="hover:text-white transition-colors">Politique de confidentialité</a>
           </div>
         </div>
       </div>
