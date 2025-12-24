@@ -117,7 +117,7 @@
     <a href="https://www.doctolib.fr/psychologue/paris/johanna-auvray" target="_blank" class="btn-clay w-full py-5 rounded-2xl text-lg font-bold shadow-xl mt-4">Prendre RDV sur Doctolib</a>
   </div>
 
-  <main id="page-content" class="pt-20 lg:pt-24 opacity-0 transition-opacity duration-500"></main>
+  <main id="page-content" class="pt-20 lg:pt-24 min-h-screen opacity-0 transition-opacity duration-500"></main>
 
   <footer class="bg-earth text-linen pt-20 pb-12">
     <div class="container mx-auto max-w-7xl px-6">
@@ -521,7 +521,9 @@
              </div>
           </div>
         </section>
-      `
+      `,
+      '/mentions': `<section class="py-24 container mx-auto max-w-4xl px-6"><h1 class="font-serif text-4xl mb-12">Mentions Légales</h1><div class="prose prose-earth text-lg font-light leading-relaxed"><p>Dr Johanna Auvray Unglik - Psychologue Clinicienne</p><p>45 Boulevard Gouvion-Saint-Cyr, 75017 Paris</p><p>SIRET : 90849197000012</p><p>Numéro ADELI / RPPS : 10008937095</p></div></section>`,
+      '/confidentialite': `<section class="py-24 container mx-auto max-w-4xl px-6"><h1 class="font-serif text-4xl mb-12">Confidentialité</h1><div class="prose prose-earth text-lg font-light leading-relaxed"><p>Le secret professionnel est au cœur de la pratique du psychologue.</p></div></section>`
     };
 
     const mainContent = document.getElementById('page-content');
@@ -544,9 +546,17 @@
 
         mainContent.style.opacity = '0';
         
+        // On force le scroll en haut immédiatement pour éviter de voir le footer pendant la transition
+        window.scrollTo(0, 0);
+
         setTimeout(() => {
             mainContent.innerHTML = templates[path];
+            
+            // Double vérification du scroll après l'injection du contenu
             window.scrollTo({ top: 0, behavior: 'instant' });
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+
             mainContent.style.opacity = '1';
             
             // Animation observer
@@ -574,7 +584,15 @@
         }
     });
 
+    // Initial load
     window.addEventListener('load', () => {
+        let hash = window.location.hash;
+        let path = hash.split('?')[0].replace('#', '');
+        render(path);
+    });
+
+    // Hash change detection (for back button)
+    window.addEventListener('hashchange', () => {
         let hash = window.location.hash;
         let path = hash.split('?')[0].replace('#', '');
         render(path);
