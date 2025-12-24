@@ -1,130 +1,577 @@
 
 <!DOCTYPE html>
-<html lang="fr" style="scroll-behavior: smooth;">
+<html lang="fr" class="scroll-smooth">
   <head>
-    <meta charset="UTF--8" />
+    <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dr Johanna Auvray – Psychologue clinicienne à Paris 17 | TCC & Neuropsychologie</title>
-    <meta name="description" content="Psychologue clinicienne à Paris 17 spécialisée en TCC, neuropsychologie, TDAH et troubles anxieux. Consultations au cabinet ou en visioconsultation. Appel découverte offert de 15 minutes.">
-    <meta name="keywords" content="psychologue Paris 17, psychologue TCC Paris 17, neuropsychologue Paris 17, bilan neuropsychologique Paris 17, psychologue spécialisée TDAH TSA Paris">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <title>Dr Johanna Auvray Unglik | Psychologue Paris 17 - TCC, ICV & Bilans</title>
+    <meta name="description" content="Cabinet de psychologie à Paris 17ème. Dr Johanna Auvray Unglik, Docteur en psychologie. Thérapies TCC, ICV et Bilans Neuropsychologiques dès 16 ans.">
     
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            background: '#F8F3EF',
-            primary: '#86968D', // New elegant sage green
-            secondary: '#3C2E2A',
-            accent: '#F5E6E0', // Old primary, now accent
-            'accent-pink': '#C8A59C',
-            text: '#3C2E2A',
-            'text-dark': '#332521',
+            linen: '#FAF7F2',
+            sage: '#7C8C7D',
+            sageDark: '#5F6D60',
+            clay: '#D48166',
+            earth: '#4A443F',
+            stone: '#A89F91',
           },
           fontFamily: {
-            heading: ['Lora', 'serif'],
-            body: ['Inter', 'sans-serif'],
-          },
-          transitionTimingFunction: {
-            'out-expo': 'cubic-bezier(0.16, 1, 0.3, 1)',
-          },
-           keyframes: {
-             'fade-in-down': {
-                '0%': { opacity: '0', transform: 'translateY(-10px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-           },
-           animation: {
-              'fade-in-down': 'fade-in-down 0.5s ease-out-expo',
-           }
+            heading: ['Libre Baskerville', 'serif'],
+            body: ['Outfit', 'sans-serif'],
+          }
         }
       }
     }
     </script>
     
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Psychologist",
-      "name": "Dr Johanna Auvray Unglik",
-      "image": "https://www.johanna-auvray.fr/portrait-johanna-auvray.jpg",
-      "description": "Psychologue clinicienne à Paris 17 spécialisée en TCC, neuropsychologie, TDAH et troubles anxieux. Consultations en cabinet et en visioconsultation.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "45 Boulevard Gouvion-Saint-Cyr",
-        "addressLocality": "Paris",
-        "postalCode": "75017",
-        "addressCountry": "FR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 48.881,
-        "longitude": 2.283
-      },
-      "url": "https://www.johanna-auvray.fr",
-      "email": "psy.auvray@gmail.com",
-      "openingHours": ["Mo 09:00-20:00", "Tu 09:00-20:00"],
-      "priceRange": "€€",
-      "sameAs": [
-        "https://www.doctolib.fr/psychologue/paris/johanna-auvray"
-      ]
-    }
-    </script>
     <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #F8F3EF;
-        color: #3C2E2A;
-        font-size: 1.1rem;
-        line-height: 1.7;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        overflow-wrap: break-word;
-        word-break: break-word;
-        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233C2E2A' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Lora', serif;
-        font-weight: 500;
-        letter-spacing: -0.025em;
-        overflow-wrap: break-word;
-      }
-      h1 { font-size: 4.5rem; line-height: 1.1; }
-      h2 { font-size: 3rem; line-height: 1.2; }
-      h3 { font-size: 1.75rem; line-height: 1.3; }
-
-      .font-heading {
-        font-family: 'Lora', serif;
-      }
-
-      @media (max-width: 768px) {
-        body {
-            font-size: 1rem;
-        }
-        h1 { font-size: 2.5rem; }
-        h2 { font-size: 2rem; }
-        h3 { font-size: 1.5rem; }
-      }
+      body { background-color: #FAF7F2; color: #4A443F; font-size: 1.1rem; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+      .font-serif { font-family: 'Libre Baskerville', serif; }
+      .card-warm { background: #FFFFFF; border-radius: 2rem; box-shadow: 0 10px 40px -15px rgba(124, 140, 125, 0.1); border: 1px solid rgba(124, 140, 125, 0.05); }
+      .btn-clay { background-color: #D48166; color: white; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
+      .btn-clay:hover { background-color: #C16B51; transform: translateY(-2px); box-shadow: 0 10px 20px -10px rgba(212, 129, 102, 0.4); }
+      .reveal { opacity: 0; transform: translateY(30px); transition: all 1s ease-out; }
+      .reveal.visible { opacity: 1; transform: translateY(0); }
+      .nav-link { position: relative; padding-bottom: 4px; }
+      .nav-link::after { content: ''; position: absolute; width: 0; height: 1.5px; bottom: 0; left: 0; background-color: #D48166; transition: width 0.3s ease; }
+      .nav-link:hover::after { width: 100%; }
+      details summary::-webkit-details-marker { display: none; }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0/index.js"
-  }
-}
-</script>
-</head>
-<body>
-  <div id="root"></div>
-  <script type="module" src="index.tsx"></script>
+  </head>
+<body class="font-body selection:bg-sage/20 overflow-x-hidden">
+
+  <header class="fixed w-full top-0 z-50 bg-linen/90 backdrop-blur-xl h-24 flex items-center border-b border-sage/5">
+    <div class="container mx-auto max-w-7xl px-6 flex justify-between items-center">
+      <a href="#/" class="nav-link-internal flex flex-col group">
+        <span class="font-serif text-xl lg:text-2xl font-bold tracking-tight text-earth group-hover:text-sage transition-colors">Dr Johanna Auvray Unglik</span>
+        <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-sage opacity-70">Psychologue Clinicienne • Paris 17</span>
+      </a>
+      
+      <nav class="hidden lg:flex items-center gap-10 text-[12px] uppercase tracking-[0.15em] font-semibold">
+        <a href="#/" class="nav-link-internal nav-link">Accueil</a>
+        <a href="#/approches" class="nav-link-internal nav-link">Approches</a>
+        <a href="#/bilans" class="nav-link-internal nav-link">Bilans</a>
+        <a href="#/a-propos" class="nav-link-internal nav-link">Parcours</a>
+        <a href="#/infos" class="nav-link-internal nav-link">Tarifs</a>
+        <a href="https://www.doctolib.fr/psychologue/paris/johanna-auvray" target="_blank" class="btn-clay px-8 py-3.5 rounded-full shadow-lg">Rendez-vous</a>
+      </nav>
+
+      <button id="menu-toggle" class="lg:hidden text-earth p-2"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16" stroke-width="2" stroke-linecap="round"></path></svg></button>
+    </div>
+  </header>
+
+  <div id="mobile-menu" class="fixed inset-0 z-[60] bg-linen hidden flex-col p-8 pt-32 space-y-8 text-center">
+    <button id="menu-close" class="absolute top-8 right-8 text-earth"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-width="2"></path></svg></button>
+    <a href="#/" class="nav-link-internal text-2xl font-serif">Accueil</a>
+    <a href="#/approches" class="nav-link-internal text-2xl font-serif">Mes Approches</a>
+    <a href="#/bilans" class="nav-link-internal text-2xl font-serif">Bilans (16+)</a>
+    <a href="#/a-propos" class="nav-link-internal text-2xl font-serif">Mon Parcours</a>
+    <a href="#/infos" class="nav-link-internal text-2xl font-serif">Tarifs</a>
+    <a href="https://www.doctolib.fr/psychologue/paris/johanna-auvray" target="_blank" class="btn-clay py-5 rounded-full text-lg font-bold">Doctolib</a>
+  </div>
+
+  <main id="page-content" class="pt-24 opacity-0 transition-opacity duration-700"></main>
+
+  <footer class="bg-earth text-linen py-24 mt-20">
+    <div class="container mx-auto max-w-7xl px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+        <div class="md:col-span-1">
+          <h3 class="font-serif text-2xl mb-6">Johanna Auvray Unglik</h3>
+          <p class="text-base opacity-60 leading-relaxed font-light">Docteure en psychologie clinicienne à Paris 17ème. Accompagnement bienveillant et spécialisé pour adultes et adolescents (dès 16 ans).</p>
+        </div>
+        <div>
+          <h4 class="text-xs uppercase tracking-[0.2em] font-bold mb-8 text-clay">Navigation</h4>
+          <nav class="flex flex-col gap-4 text-base opacity-80">
+            <a href="#/" class="nav-link-internal hover:text-sage transition-colors">Accueil</a>
+            <a href="#/approches" class="nav-link-internal hover:text-sage transition-colors">Approches</a>
+            <a href="#/a-propos" class="nav-link-internal hover:text-sage transition-colors">Parcours</a>
+            <a href="#/infos" class="nav-link-internal hover:text-sage transition-colors">Tarifs & Accès</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="text-xs uppercase tracking-[0.2em] font-bold mb-8 text-clay">Cabinet Paris 17</h4>
+          <p class="opacity-80 mb-2">45 Boulevard Gouvion-Saint-Cyr</p>
+          <p class="opacity-80 mb-4">75017 Paris</p>
+          <a href="mailto:psy.auvray@gmail.com" class="text-sage font-semibold underline underline-offset-4">psy.auvray@gmail.com</a>
+        </div>
+        <div>
+          <h4 class="text-xs uppercase tracking-[0.2em] font-bold mb-8 text-clay">Informations</h4>
+          <p class="text-[12px] opacity-40 leading-loose">RPPS : 10008937095<br>SIRET : 90849197000012<br>Membre de l'AFTCC</p>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center text-[12px] opacity-30 gap-4">
+        <p>&copy; 2025 Dr Johanna Auvray Unglik. Site professionnel.</p>
+        <div class="flex gap-8 uppercase tracking-widest font-semibold">
+          <a href="#/mentions" class="nav-link-internal hover:opacity-100">Mentions légales</a>
+          <a href="#/confidentialite" class="nav-link-internal hover:opacity-100">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    const templates = {
+      '/': `
+        <!-- HERO -->
+        <section class="py-16 lg:py-28 container mx-auto max-w-7xl px-6">
+          <div class="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+            <div class="lg:w-1/2 reveal">
+              <div class="inline-flex items-center gap-3 mb-8 px-4 py-1.5 bg-sage/10 rounded-full border border-sage/5">
+                 <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sage opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-sage"></span></span>
+                 <span class="text-xs uppercase tracking-[0.2em] font-bold text-sageDark">Cabinet situé à Paris 17 (Porte Maillot)</span>
+              </div>
+              <h1 class="font-serif text-5xl lg:text-7xl leading-[1.15] mb-8 text-earth">Dr. Johanna <br><span class="text-clay">Auvray Unglik</span></h1>
+              <h2 class="font-serif text-2xl lg:text-4xl text-stone italic mb-10">Psychologue à Paris 17</h2>
+              <p class="text-lg lg:text-xl leading-relaxed text-earth/80 mb-12 max-w-xl font-light">
+                Psychologue clinicienne et Thérapeute TCC, je vous accompagne avec <strong>bienveillance</strong> pour surmonter vos <strong>difficultés</strong> et retrouver un bien-être durable.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-6 items-center">
+                <a href="https://www.doctolib.fr/psychologue/paris/johanna-auvray" target="_blank" class="btn-clay w-full sm:w-auto px-12 py-5 font-bold rounded-full uppercase text-[12px] tracking-[0.2em] text-center shadow-xl">Prendre RDV sur Doctolib</a>
+                <p class="text-sm text-stone font-medium">Pour adultes et adolescents (16+)</p>
+              </div>
+            </div>
+            <div class="lg:w-1/2 reveal delay-200">
+              <div class="relative group">
+                <div class="absolute -inset-4 bg-sage/5 rounded-[3rem] blur-2xl transition duration-500 group-hover:bg-sage/15"></div>
+                <img src="https://static.wixstatic.com/media/8db961_34f8beb4872e4acdb3559ab923dddd2c~mv2.jpg" alt="Dr Johanna Auvray Unglik" class="relative rounded-[2.5rem] shadow-2xl w-full h-auto object-cover grayscale-[5%] border-8 border-white">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- INTRO CHALEUREUSE -->
+        <section class="py-24 bg-white/50 border-y border-sage/5 reveal">
+          <div class="container mx-auto max-w-4xl px-6 text-center">
+            <h3 class="font-serif text-3xl lg:text-4xl mb-10 text-earth">Une approche humaine <span class="italic text-sage">&</span> structurée</h3>
+            <p class="text-lg lg:text-xl text-earth/70 leading-relaxed font-light mb-12">
+              Chaque personne est unique. Mon rôle est de vous offrir un espace d'écoute sécurisant tout en vous transmettant des outils concrets basés sur les sciences cognitives pour vous aider à redevenir acteur de votre vie.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+              <div class="flex flex-col items-center">
+                <div class="w-14 h-14 bg-linen rounded-2xl flex items-center justify-center text-sage mb-4 shadow-sm"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" stroke-width="1.5"></path></svg></div>
+                <p class="text-sm font-bold uppercase tracking-widest text-earth">Collaboratif</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <div class="w-14 h-14 bg-linen rounded-2xl flex items-center justify-center text-sage mb-4 shadow-sm"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-width="1.5"></path></svg></div>
+                <p class="text-sm font-bold uppercase tracking-widest text-earth">Scientifique</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <div class="w-14 h-14 bg-linen rounded-2xl flex items-center justify-center text-sage mb-4 shadow-sm"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-width="1.5"></path></svg></div>
+                <p class="text-sm font-bold uppercase tracking-widest text-earth">Bienveillant</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SERVICES EN HOME -->
+        <section class="py-32 container mx-auto max-w-7xl px-6 reveal">
+          <div class="text-center mb-20">
+            <h3 class="font-serif text-4xl lg:text-5xl mb-6">Mes Prises en Charge</h3>
+            <p class="text-stone font-semibold uppercase tracking-[0.2em] text-[12px]">Adultes & Adolescents (16+)</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="card-warm p-12 text-center group hover:bg-sage/5 transition-all duration-500">
+              <h4 class="font-serif text-2xl mb-6">Thérapies TCC</h4>
+              <p class="text-base text-earth/70 font-light mb-8 leading-relaxed">Identifier et modifier les pensées et comportements sources de souffrance pour un changement concret au quotidien.</p>
+              <a href="#/approches" class="nav-link-internal inline-block font-bold text-xs uppercase tracking-[0.2em] text-sage hover:text-clay transition-colors border-b-2 border-sage/20 pb-1">En savoir plus</a>
+            </div>
+            <div class="card-warm p-12 text-center group hover:bg-sage/5 transition-all duration-500">
+              <h4 class="font-serif text-2xl mb-6">Thérapie ICV</h4>
+              <p class="text-base text-earth/70 font-light mb-8 leading-relaxed">Une méthode douce pour réparer les blessures émotionnelles et renforcer la cohérence de soi via la Ligne du Temps.</p>
+              <a href="#/approches" class="nav-link-internal inline-block font-bold text-xs uppercase tracking-[0.2em] text-sage hover:text-clay transition-colors border-b-2 border-sage/20 pb-1">En savoir plus</a>
+            </div>
+            <div class="card-warm p-12 text-center group hover:bg-sage/5 transition-all duration-500">
+              <h4 class="font-serif text-2xl mb-6">Bilans Cognitifs</h4>
+              <p class="text-base text-earth/70 font-light mb-8 leading-relaxed">Évaluation spécialisée (QI, TDAH, HPI) à l'aide de matériel standardisé papier pour une meilleure compréhension de soi.</p>
+              <a href="#/bilans" class="nav-link-internal inline-block font-bold text-xs uppercase tracking-[0.2em] text-sage hover:text-clay transition-colors border-b-2 border-sage/20 pb-1">En savoir plus</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ EN HOME -->
+        <section class="py-32 bg-sage/5 reveal">
+          <div class="container mx-auto max-w-4xl px-6">
+            <h3 class="font-serif text-4xl text-center mb-16 text-earth">Questions Fréquentes</h3>
+            <div class="space-y-6">
+              <details class="group card-warm p-8 cursor-pointer overflow-hidden">
+                <summary class="flex justify-between items-center font-bold text-lg list-none">
+                  Psychologue ou Psychiatre ?
+                  <span class="transition-transform group-open:rotate-180 text-sage"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-width="2.5"></path></svg></span>
+                </summary>
+                <div class="mt-8 text-base font-light leading-relaxed text-earth/70 space-y-4">
+                  <p>Le <strong>psychiatre</strong> est un médecin. Il peut diagnostiquer des pathologies mentales et prescrire des médicaments. Ses consultations sont remboursées.</p>
+                  <p>Le <strong>psychologue</strong> (comme moi) est expert du fonctionnement psychique. Je propose un accompagnement par la parole et des outils thérapeutiques (TCC, etc.). Ces séances sont souvent prises en charge par les mutuelles.</p>
+                </div>
+              </details>
+              <details class="group card-warm p-8 cursor-pointer overflow-hidden">
+                <summary class="flex justify-between items-center font-bold text-lg list-none">
+                  Comment se passe la première séance ?
+                  <span class="transition-transform group-open:rotate-180 text-sage"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-width="2.5"></path></svg></span>
+                </summary>
+                <div class="mt-8 text-base font-light leading-relaxed text-earth/70">
+                  <p>C'est un temps de rencontre et d'évaluation. Nous explorons ensemble votre demande, vos difficultés actuelles et votre histoire. Cela nous permet de définir si mon approche correspond à vos besoins et de fixer les premiers objectifs.</p>
+                </div>
+              </details>
+              <details class="group card-warm p-8 cursor-pointer overflow-hidden">
+                <summary class="flex justify-between items-center font-bold text-lg list-none">
+                  Faites-vous de la téléconsultation ?
+                  <span class="transition-transform group-open:rotate-180 text-sage"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-width="2.5"></path></svg></span>
+                </summary>
+                <div class="mt-8 text-base font-light leading-relaxed text-earth/70">
+                  <p>Oui, je propose des consultations à distance via une plateforme sécurisée (Microsoft Teams). Le déroulement et le tarif sont identiques aux séances en présentiel.</p>
+                </div>
+              </details>
+            </div>
+            <div class="text-center mt-16">
+              <p class="text-stone italic text-sm mb-6">D'autres questions sur ma pratique ?</p>
+              <a href="#/contact" class="nav-link-internal font-bold text-sage underline underline-offset-4 decoration-clay/40">Me contacter directement</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="py-32 container mx-auto max-w-4xl px-6 text-center reveal">
+          <h3 class="font-serif text-5xl mb-12">Faire le premier pas</h3>
+          <p class="text-xl text-earth/60 mb-16 max-w-2xl mx-auto font-light leading-relaxed">Un premier échange permet souvent d'y voir plus clair. Je vous accueille au cabinet situé à deux pas de la Porte Maillot.</p>
+          <div class="flex flex-col sm:flex-row gap-8 justify-center items-center">
+            <a href="https://www.doctolib.fr/psychologue/paris/johanna-auvray" target="_blank" class="btn-clay px-16 py-6 font-bold rounded-full uppercase text-[12px] tracking-[0.2em] shadow-2xl">Rendez-vous Doctolib</a>
+            <a href="tel:0614886579" class="text-lg font-bold text-earth hover:text-sage transition-colors">06 14 88 65 79</a>
+          </div>
+        </section>
+      `,
+
+      '/approches': `
+        <section class="py-24 lg:py-40 container mx-auto max-w-6xl px-6">
+          <h1 class="font-serif text-6xl text-center mb-32 text-earth">Mes Approches</h1>
+          
+          <!-- TCC -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center mb-48 reveal">
+            <div>
+              <h2 class="font-serif text-4xl mb-10 text-earth">Thérapies <br><span class="text-sage">TCC</span></h2>
+              <p class="text-lg leading-relaxed text-earth/70 mb-8 font-light italic">"Le thérapeute est interactif et collaboratif, centrant la prise en charge sur le comment changer ici et maintenant."</p>
+              <p class="text-lg leading-relaxed text-earth/70 mb-10 font-light">Les TCC sont centrées sur l’identification et la modification des pensées, émotions et comportements sources de souffrance. C’est une approche scientifique qui redonne au patient les clés de sa gestion psychique.</p>
+              <h4 class="font-bold text-[12px] uppercase tracking-widest text-clay mb-8">Troubles pris en charge :</h4>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 text-[15px] font-semibold text-stone">
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-sage rounded-full"></span> Anxiété & Phobies</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-sage rounded-full"></span> TOC & Obsessions</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-sage rounded-full"></span> Dépression</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-sage rounded-full"></span> TCA (Alimentaire)</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-sage rounded-full"></span> TND (TDAH, TSA)</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-sage rounded-full"></span> Deuil & Maladie</li>
+              </ul>
+            </div>
+            <div class="card-warm p-16 shadow-2xl border-sage/10">
+               <h3 class="font-serif text-2xl mb-8 italic">Le processus</h3>
+               <div class="space-y-8 text-base text-earth/70 leading-relaxed font-light">
+                 <div class="flex gap-6">
+                   <span class="text-3xl font-serif text-sage/30">01</span>
+                   <p><strong>Évaluation :</strong> Comprendre la difficulté, l'histoire de vie et le contexte actuel.</p>
+                 </div>
+                 <div class="flex gap-6">
+                   <span class="text-3xl font-serif text-sage/30">02</span>
+                   <p><strong>Projet :</strong> Définition d'un projet thérapeutique personnalisé avec objectifs clairs.</p>
+                 </div>
+                 <div class="flex gap-6">
+                   <span class="text-3xl font-serif text-sage/30">03</span>
+                   <p><strong>Action :</strong> Exercices concrets et pratiques pour modifier les automatismes négatifs.</p>
+                 </div>
+               </div>
+            </div>
+          </div>
+
+          <!-- ICV -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center reveal">
+            <div class="lg:order-last">
+              <h2 class="font-serif text-4xl mb-10 text-earth">Thérapie <br><span class="text-sage">ICV</span></h2>
+              <p class="text-lg leading-relaxed text-earth/70 mb-10 font-light">L’ICV (Intégration du Cycle de la Vie) est une méthode douce qui vise à réparer les blessures émotionnelles en renforçant le sentiment de continuité de soi.</p>
+              <div class="bg-linen p-8 rounded-3xl border border-sage/10 mb-10">
+                <p class="text-base text-earth/70 font-light leading-relaxed italic">"Le cœur de la thérapie repose sur la <strong>Ligne du Temps</strong> : une répétition qui permet au cerveau de réaliser que les traumatismes sont bel et bien terminés."</p>
+              </div>
+              <h4 class="font-bold text-[12px] uppercase tracking-widest text-clay mb-8">Adaptée pour :</h4>
+              <ul class="space-y-4 text-[15px] font-semibold text-stone">
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-sage rounded-full"></span> Traumatismes (récents ou précoces)</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-sage rounded-full"></span> Troubles de l'attachement</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-sage rounded-full"></span> Sentiment de vide ou d'incohérence</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-sage rounded-full"></span> Deuil ou séparation difficile</li>
+              </ul>
+            </div>
+            <div class="relative group">
+               <div class="absolute -inset-2 bg-clay/10 rounded-[3rem] blur-xl"></div>
+               <div class="card-warm p-16 relative border-sage/10">
+                 <h3 class="font-serif text-2xl mb-8 italic">Bénéfices durables</h3>
+                 <ul class="space-y-10">
+                   <li class="flex gap-6">
+                      <span class="text-sage text-2xl font-serif">A.</span>
+                      <p class="text-base leading-relaxed text-earth/70 font-light">Une approche non-intrusive qui respecte votre rythme et votre système nerveux.</p>
+                   </li>
+                   <li class="flex gap-6">
+                      <span class="text-sage text-2xl font-serif">B.</span>
+                      <p class="text-base leading-relaxed text-earth/70 font-light">Un renforcement profond de votre identité et de votre stabilité émotionnelle.</p>
+                   </li>
+                   <li class="flex gap-6">
+                      <span class="text-sage text-2xl font-serif">C.</span>
+                      <p class="text-base leading-relaxed text-earth/70 font-light">Une intégration cohérente du passé pour un ancrage solide dans le présent.</p>
+                   </li>
+                 </ul>
+               </div>
+            </div>
+          </div>
+        </section>
+      `,
+
+      '/bilans': `
+        <section class="py-24 lg:py-40 container mx-auto max-w-4xl px-6">
+          <h1 class="font-serif text-5xl lg:text-6xl text-center mb-10 text-earth">Bilans Neuropsychologiques</h1>
+          <p class="text-center text-clay font-bold uppercase tracking-[0.25em] text-[12px] mb-24">Adultes et Adolescents (dès 16 ans)</p>
+          
+          <div class="space-y-24 reveal">
+            <div class="card-warm p-12 lg:p-20">
+              <h2 class="font-serif text-3xl mb-10 text-earth italic">Mieux comprendre son fonctionnement</h2>
+              <p class="text-lg leading-relaxed text-earth/70 mb-12 font-light">Un bilan est une évaluation spécialisée permettant d’analyser les fonctions cognitives à l’aide de tests standardisés. Il vise à objectiver les forces et les fragilités pour orienter vers des accompagnements adaptés.</p>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
+                <div class="bg-linen p-8 rounded-[2rem] border border-sage/5">
+                  <h4 class="font-bold text-sage mb-4 uppercase tracking-widest text-xs">Domaines évalués :</h4>
+                  <ul class="text-sm space-y-3 font-semibold text-stone">
+                    <li>• Efficience intellectuelle (QI)</li>
+                    <li>• Attention & Fonctions exécutives</li>
+                    <li>• Mémoire (immédiate & long terme)</li>
+                    <li>• Capacités visuospatiales</li>
+                  </ul>
+                </div>
+                <div class="bg-linen p-8 rounded-[2rem] border border-sage/5">
+                  <h4 class="font-bold text-sage mb-4 uppercase tracking-widest text-xs">Situations types :</h4>
+                  <ul class="text-sm space-y-3 font-semibold text-stone">
+                    <li>• Suspicion de TDAH</li>
+                    <li>• Doutes sur un Haut Potentiel (HPI)</li>
+                    <li>• Baisse des performances</li>
+                    <li>• Aménagements (1/3 temps)</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bg-clay/5 p-10 rounded-[2rem] border border-clay/10 text-base italic leading-relaxed text-earth/80">
+                "Par souci de rigueur clinique et pour garantir une observation de qualité, mes bilans sont réalisés exclusivement à l'aide de <strong>matériel standardisé papier</strong> (aucune évaluation sur tablette)."
+              </div>
+            </div>
+
+            <div class="card-warm p-12 lg:p-20 bg-earth text-linen">
+              <h2 class="font-serif text-3xl mb-12 text-clay italic">Le protocole TDAH</h2>
+              <p class="text-lg opacity-80 mb-12 font-light">Le diagnostic de TDAH est clinique. Mon évaluation complète permet d'objectiver les difficultés attentionnelles et leurs répercussions quotidiennes.</p>
+              <ul class="space-y-8">
+                <li class="flex gap-6 items-start">
+                  <div class="w-10 h-10 rounded-full bg-clay flex items-center justify-center shrink-0 font-bold">1</div>
+                  <p class="text-base opacity-90 leading-relaxed font-light">Entretien clinique approfondi et recueil d'antécédents.</p>
+                </li>
+                <li class="flex gap-6 items-start">
+                  <div class="w-10 h-10 rounded-full bg-clay flex items-center justify-center shrink-0 font-bold">2</div>
+                  <p class="text-base opacity-90 leading-relaxed font-light">Questionnaires standardisés pour vous et vos proches (optionnel).</p>
+                </li>
+                <li class="flex gap-6 items-start">
+                  <div class="w-10 h-10 rounded-full bg-clay flex items-center justify-center shrink-0 font-bold">3</div>
+                  <p class="text-base opacity-90 leading-relaxed font-light">Analyse cognitive globale incluant les fonctions attentionnelles et exécutives.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      `,
+
+      '/a-propos': `
+        <section class="py-24 lg:py-40 container mx-auto max-w-6xl px-6">
+          <div class="flex flex-col lg:flex-row gap-20 items-start">
+            <div class="lg:w-2/3 reveal">
+              <h1 class="font-serif text-6xl mb-16 text-earth">Mon Parcours</h1>
+              <div class="space-y-12 text-lg leading-relaxed text-earth/70 font-light">
+                <div>
+                  <h3 class="font-bold text-[12px] uppercase tracking-[0.2em] text-clay mb-6">Formation & Recherche</h3>
+                  <p>Diplômée d'un <strong>Doctorat en Psychologie</strong> de l'Université Paris Cité. J'ai réalisé mon travail de thèse au sein des services de neurologie et de psychiatrie de l'<strong>Hôpital de la Pitié-Salpêtrière (AP-HP)</strong>. Mes recherches se sont concentrées sur les processus cognitifs et émotionnels.</p>
+                </div>
+                <div>
+                  <h3 class="font-bold text-[12px] uppercase tracking-[0.2em] text-clay mb-6">Expérience Clinique</h3>
+                  <p>Mon parcours hospitalier m'a permis d'acquérir une expertise solide, notamment à l'<strong>Hôpital d'Argenteuil</strong> au sein du service de chirurgie bariatrique, où j'ai accompagné des patients dans des parcours de soins complexes nécessitant une écoute attentive et structurée.</p>
+                </div>
+                <div class="bg-white p-16 rounded-[3rem] card-shadow border border-sage/10 italic relative overflow-hidden">
+                  <div class="absolute top-0 right-0 p-8 text-sage/5 scale-[4]"><svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3L20.017 3C21.1216 3 22.017 3.89543 22.017 5V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM3 21L3 18C3 16.8954 3.89543 16 5 16H8C8.55228 16 9 15.5523 9 15V9C9 8.44772 8.55228 8 8 8H5C3.89543 8 3 7.10457 3 6V3L9 3C10.1046 3 11 3.89543 11 5V15C11 18.3137 8.31371 21 5 21H3Z" /></svg></div>
+                  <h3 class="font-serif text-3xl mb-8 text-earth not-italic">Ma Philosophie du Travail</h3>
+                  <p class="relative z-10 text-xl text-earth/80">Je conçois la thérapie comme un travail d'équipe. Mon rôle est de vous offrir un cadre sécurisant et de vous transmettre des outils concrets pour que vous puissiez devenir l'expert(e) de votre propre fonctionnement et l'acteur/actrice de votre changement.</p>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/3 reveal delay-300">
+               <div class="sticky top-40 text-center">
+                  <div class="relative inline-block mb-10">
+                    <img src="https://static.wixstatic.com/media/8db961_34f8beb4872e4acdb3559ab923dddd2c~mv2.jpg" alt="Johanna Auvray" class="rounded-[3rem] shadow-2xl grayscale-[10%] w-full max-w-[400px]">
+                  </div>
+                  <p class="text-[12px] font-bold uppercase tracking-widest text-stone opacity-40">Docteure Johanna Auvray Unglik</p>
+                  <p class="text-[10px] uppercase tracking-[0.3em] font-bold text-sage mt-2">Psychologue Clinicienne</p>
+               </div>
+            </div>
+          </div>
+        </section>
+      `,
+
+      '/infos': `
+        <section class="py-24 lg:py-40 container mx-auto max-w-5xl px-6">
+          <h1 class="font-serif text-6xl text-center mb-24 text-earth">Tarifs & Pratique</h1>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16 reveal">
+            <div class="card-warm p-16 shadow-2xl border-sage/5">
+              <h3 class="font-serif text-3xl mb-10 text-clay">Consultations</h3>
+              <div class="space-y-8 text-lg font-light">
+                <div class="flex justify-between border-b border-sage/10 pb-6">
+                  <span class="text-earth/70">Individuelle (45 min)</span>
+                  <span class="font-bold text-earth">90€</span>
+                </div>
+                <div class="flex justify-between border-b border-sage/10 pb-6">
+                  <span class="text-earth/70">Couple (1h)</span>
+                  <span class="font-bold text-earth">120€</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-warm p-16 shadow-2xl border-sage/5">
+              <h3 class="font-serif text-3xl mb-10 text-clay">Bilans Neuropsy</h3>
+              <div class="space-y-8 text-lg font-light">
+                <div class="flex justify-between border-b border-sage/10 pb-6">
+                  <span class="text-earth/70">QI ou Cognitif seul</span>
+                  <span class="font-bold text-earth">280€</span>
+                </div>
+                <div class="flex justify-between border-b border-sage/10 pb-6">
+                  <span class="text-earth/70">Pack Complet QI + Cognitif</span>
+                  <span class="font-bold text-earth">380€</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-warm p-16 shadow-2xl border-sage/5 mb-24 reveal">
+            <h3 class="font-serif text-3xl mb-10 text-clay">Évaluation TDAH</h3>
+            <div class="grid md:grid-cols-2 gap-12 text-lg font-light">
+              <div class="space-y-6">
+                <div class="flex justify-between border-b border-sage/10 pb-4">
+                  <span class="text-earth/70">Entretien + Questionnaires</span>
+                  <span class="font-bold text-earth">90€</span>
+                </div>
+                <div class="flex justify-between border-b border-sage/10 pb-4">
+                  <span class="text-earth/70">Analyse + Restitution + CR</span>
+                  <span class="font-bold text-earth">170€</span>
+                </div>
+              </div>
+              <p class="text-sm text-stone italic leading-relaxed">L'évaluation cognitive peut être ajoutée selon les objectifs (Pack complet à 380€ incluant entretien et compte-rendu final).</p>
+            </div>
+          </div>
+
+          <div class="text-center max-w-3xl mx-auto bg-sage/5 p-12 rounded-[3rem] reveal">
+            <h3 class="font-serif text-2xl mb-8">Informations de remboursement</h3>
+            <p class="text-lg text-earth/70 font-light leading-relaxed mb-10">Les consultations de psychologue en libéral ne sont pas remboursées par l'Assurance Maladie. Toutefois, de nombreuses <strong>mutuelles</strong> proposent une prise en charge partielle ou totale. Une facture vous sera remise à chaque séance.</p>
+            <div class="aspect-video w-full rounded-[2.5rem] overflow-hidden grayscale contrast-125 brightness-95 border-8 border-white shadow-2xl">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.778848496677!2d2.2872323770381333!3d48.8824707713358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f8da7907579%3A0x600c012520696c21!2s45%20Bd%20Gouvion-Saint-Cyr%2C%2075017%20Paris!5e0!3m2!1sfr!2sfr!4v1710000000000!5m2!1sfr!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </section>
+      `,
+
+      '/contact': `
+        <section class="py-24 lg:py-40 container mx-auto max-w-5xl px-6 text-center">
+          <h1 class="font-serif text-6xl mb-16 text-earth">Contact</h1>
+          <p class="text-2xl font-light text-earth/60 mb-20 max-w-2xl mx-auto">Pour toute question sur ma pratique ou sur l'organisation des séances, n'hésitez pas à me joindre directement.</p>
+          
+          <div class="grid md:grid-cols-2 gap-10 mb-24">
+            <div class="card-warm p-16 shadow-2xl border-sage/10 transition-transform hover:scale-[1.02]">
+              <h4 class="text-[12px] uppercase tracking-[0.4em] font-bold text-clay mb-8">Par téléphone</h4>
+              <a href="tel:0614886579" class="font-serif text-4xl text-earth hover:text-sage transition-colors">06 14 88 65 79</a>
+            </div>
+            <div class="card-warm p-16 shadow-2xl border-sage/10 transition-transform hover:scale-[1.02]">
+              <h4 class="text-[12px] uppercase tracking-[0.4em] font-bold text-clay mb-8">Par email</h4>
+              <a href="mailto:psy.auvray@gmail.com" class="font-serif text-3xl text-earth hover:text-sage transition-colors break-words">psy.auvray@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="bg-earth text-linen p-16 rounded-[4rem] text-left reveal">
+             <div class="flex flex-col lg:flex-row gap-16">
+               <div class="lg:w-1/2">
+                 <h4 class="text-[12px] uppercase tracking-[0.4em] font-bold text-clay mb-10">Accès au Cabinet</h4>
+                 <p class="text-2xl font-serif mb-6 italic">45 Boulevard <br>Gouvion-Saint-Cyr, 75017</p>
+                 <div class="space-y-4 text-base opacity-70 font-light">
+                    <p>• M1 : Porte Maillot</p>
+                    <p>• M3 : Champerret</p>
+                    <p>• RER C : Porte Maillot</p>
+                 </div>
+               </div>
+               <div class="lg:w-1/2">
+                 <a href="https://www.doctolib.fr/psychologue/paris/johanna-auvray" target="_blank" class="btn-clay w-full py-6 rounded-full font-bold text-center block text-[12px] uppercase tracking-[0.2em] shadow-xl">Réserver sur Doctolib</a>
+                 <p class="mt-8 text-sm opacity-40 leading-relaxed italic">Le cabinet est ouvert sur rendez-vous uniquement. En cas d'urgence, merci de contacter le 15 ou les urgences psychiatriques les plus proches.</p>
+               </div>
+             </div>
+          </div>
+        </section>
+      `
+    };
+
+    const mainContent = document.getElementById('page-content');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+
+    function toggleMenu() {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+        document.body.style.overflow = mobileMenu.classList.contains('hidden') ? '' : 'hidden';
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+    menuClose.addEventListener('click', toggleMenu);
+
+    const render = (path) => {
+        if (!path || path === '') path = '/';
+        if (!templates[path]) path = '/';
+
+        mainContent.style.opacity = '0';
+        
+        setTimeout(() => {
+            mainContent.innerHTML = templates[path];
+            window.scrollTo({ top: 0, behavior: 'instant' });
+            mainContent.style.opacity = '1';
+            
+            // Animation observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+            
+            try { history.pushState(null, null, '#' + path); } catch(e) {}
+        }, 150);
+    };
+
+    document.body.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (!link) return;
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#/')) {
+            e.preventDefault();
+            const path = href.replace('#', '');
+            if (!mobileMenu.classList.contains('hidden')) toggleMenu();
+            render(path);
+        }
+    });
+
+    window.addEventListener('load', () => {
+        let hash = window.location.hash;
+        let path = hash.split('?')[0].replace('#', '');
+        render(path);
+    });
+  </script>
 </body>
 </html>
