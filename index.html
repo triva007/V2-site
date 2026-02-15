@@ -6,9 +6,9 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     
-    <!-- SEO Principal -->
+    <!-- SEO Principal (Valeurs par défaut, mises à jour via JS) -->
     <title>Johanna Auvray Unglik | Psychologue Paris 17 - TCC, ICV & Bilans</title>
-    <meta name="description" content="Cabinet de psychologie à Paris 17 (Porte Maillot). Johanna Auvray Unglik, Docteur en psychologie. Thérapies TCC, ICV et Bilans Neuropsychologiques (QI, TDAH) pour adultes et adolescents.">
+    <meta name="description" content="Cabinet de psychologie à Paris 17 (Porte Maillot). Johanna Auvray Unglik, Docteur en psychologie. Thérapies TCC, ICV et Bilans Neuropsychologiques (QI, TDAH).">
     <meta name="keywords" content="Psychologue Paris 17, TCC Paris, ICV Paris, Bilan TDAH Paris, Bilan Neuropsychologique, Johanna Auvray Unglik, Psychologue Porte Maillot">
     <link rel="canonical" href="https://www.psychologue-auvray.com/" />
     
@@ -235,7 +235,7 @@
                  <span class="text-[10px] lg:text-xs uppercase tracking-[0.2em] font-bold text-sageDark">Paris 17 • Porte Maillot</span>
               </div>
               <h1 class="font-serif text-4xl lg:text-7xl leading-tight mb-6 text-earth">Johanna <br><span class="text-clay italic font-normal">Auvray Unglik</span></h1>
-              <h2 class="font-serif text-xl lg:text-3xl text-stone italic mb-8">Docteur en Psychologie Clinique</h2>
+              <h2 class="font-serif text-xl lg:text-3xl text-stone italic mb-8">Psychologue Clinicienne Paris 17</h2>
               <p class="text-lg lg:text-xl leading-relaxed text-earth/80 mb-10 font-light">
                 Spécialisée en <strong>TCC</strong>, je vous accompagne avec bienveillance pour surmonter vos difficultés et retrouver un équilibre durable.
               </p>
@@ -682,6 +682,47 @@
     const menuToggle = document.getElementById('menu-toggle');
     const menuClose = document.getElementById('menu-close');
 
+    // Configuration SEO pour chaque page
+    const seoConfig = {
+      '/': {
+        title: "Johanna Auvray Unglik | Psychologue Paris 17 - TCC & Bilans",
+        desc: "Cabinet de psychologie à Paris 17 (Porte Maillot). Thérapies TCC, ICV et Bilans Neuropsychologiques (QI, TDAH) pour adultes et adolescents."
+      },
+      '/approches': {
+        title: "Thérapies TCC & ICV | Psychologue Paris 17",
+        desc: "Découvrez les approches TCC (Thérapies Cognitivo-Comportementales) et ICV (Intégration du Cycle de la Vie) pour l'anxiété, la dépression et les traumatismes."
+      },
+      '/bilans': {
+        title: "Bilan Neuropsychologique & QI (HPI, TDAH) | Paris 17",
+        desc: "Réalisation de bilans cognitifs complets : test de QI (WISC/WAIS) et évaluation des fonctions attentionnelles (TDAH). Dès 16 ans."
+      },
+      '/a-propos': {
+        title: "Parcours & Expertise | Johanna Auvray Unglik",
+        desc: "Docteur en psychologie clinicienne (PhD). Expérience hospitalière (Pitié-Salpêtrière, Argenteuil) et formatrice UNAFAM. Spécialisée en TCC et TSA."
+      },
+      '/infos': {
+        title: "Tarifs & Accès Cabinet | Psychologue Paris 17",
+        desc: "Consultations psychologie : 90€ (45 min). Bilans neuropsychologiques : de 280€ à 380€. Cabinet situé au 45 Bd Gouvion-Saint-Cyr, Paris 17."
+      },
+      '/contact': {
+        title: "Prendre Rendez-vous | Psychologue Paris 17",
+        desc: "Contactez le cabinet au 06 14 88 65 79 ou via Doctolib pour une consultation psychologique à Paris 17 Porte Maillot."
+      }
+    };
+
+    function updateSEO(path) {
+      const config = seoConfig[path] || seoConfig['/'];
+      document.title = config.title;
+      
+      // Update Meta Description
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', config.desc);
+      
+      // Update Canonical Link
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) canonical.setAttribute('href', 'https://www.psychologue-auvray.com' + (path === '/' ? '/' : path));
+    }
+
     function toggleMenu() {
         mobileMenu.classList.toggle('hidden');
         mobileMenu.classList.toggle('flex');
@@ -692,22 +733,27 @@
     menuClose.addEventListener('click', toggleMenu);
 
     const render = (path) => {
-        if (!path || path === '') path = '/';
+        // Normalisation du chemin (enlève le hash si présent, ou utilise le pathname)
+        if (!path) path = '/';
+        if (path.startsWith('#/')) path = path.replace('#', '');
+        
+        // Sécurité
         if (!templates[path]) path = '/';
+
+        // Mise à jour SEO dynamique
+        updateSEO(path);
 
         mainContent.style.opacity = '0';
         
-        // On force le scroll en haut immédiatement pour éviter de voir le footer pendant la transition
+        // On force le scroll en haut immédiatement
         window.scrollTo(0, 0);
 
         setTimeout(() => {
             mainContent.innerHTML = templates[path];
             
-            // Double vérification du scroll après l'injection du contenu
+            // Double vérification du scroll
             window.scrollTo({ top: 0, behavior: 'instant' });
-            document.documentElement.scrollTop = 0;
-            document.body.scrollTop = 0;
-
+            
             mainContent.style.opacity = '1';
             
             // Animation observer
@@ -719,7 +765,15 @@
             
             document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
             
-            try { history.pushState(null, null, '#' + path); } catch(e) {}
+            // Mise à jour de l'URL dans le navigateur sans rechargement
+            try { 
+               if (path !== '/') {
+                 // On garde le hash pour la navigation interne pour éviter les 404 sur les serveurs statiques simples
+                 history.pushState(null, null, '#' + path); 
+               } else {
+                 history.pushState(null, null, '/');
+               }
+            } catch(e) {}
         }, 150);
     };
 
@@ -727,6 +781,7 @@
         const link = e.target.closest('a');
         if (!link) return;
         const href = link.getAttribute('href');
+        // Gestion des liens internes (commençant par #/)
         if (href && href.startsWith('#/')) {
             e.preventDefault();
             const path = href.replace('#', '');
@@ -735,17 +790,23 @@
         }
     });
 
-    // Initial load
+    // Chargement initial intelligent
     window.addEventListener('load', () => {
-        let hash = window.location.hash;
-        let path = hash.split('?')[0].replace('#', '');
+        let path = '/';
+        // Priorité au Hash (ex: /#/bilans)
+        if (window.location.hash) {
+            path = window.location.hash.replace('#', '');
+        } 
+        // Sinon vérifie le pathname (ex: /bilans) pour supporter les liens venant de Google
+        else if (window.location.pathname.length > 1) {
+            path = window.location.pathname;
+        }
         render(path);
     });
 
-    // Hash change detection (for back button)
+    // Détection changement hash (bouton retour navigateur)
     window.addEventListener('hashchange', () => {
-        let hash = window.location.hash;
-        let path = hash.split('?')[0].replace('#', '');
+        let path = window.location.hash.replace('#', '');
         render(path);
     });
   </script>
